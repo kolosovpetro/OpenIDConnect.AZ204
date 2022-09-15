@@ -1,6 +1,8 @@
-# OpenIDConnect.AZ204
+# OpenIDConnect Demo
 
-Single amd Multi tenant authorization using ASP NET Core and Active Directory
+[![Run Build and Test](https://github.com/kolosovpetro/OpenIDConnect.AZ204/actions/workflows/run-build-and-test-dotnet.yml/badge.svg)](https://github.com/kolosovpetro/OpenIDConnect.AZ204/actions/workflows/run-build-and-test-dotnet.yml)
+
+Single and Multi tenant authorization using ASP NET Core and Active Directory
 
 ## Infrastructure provision
 
