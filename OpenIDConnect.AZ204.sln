@@ -19,6 +19,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "items", "items", "{5425C706
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "img", "img", "{BA1D32EC-27BF-4B4C-9596-31387AAE8DF5}"
+	ProjectSection(SolutionItems) = preProject
+		img\01_add_platform.PNG = img\01_add_platform.PNG
+		img\02_add_platform.PNG = img\02_add_platform.PNG
+		img\03_new_user_in_portal.PNG = img\03_new_user_in_portal.PNG
+		img\04_multi_tenant_app_registration.PNG = img\04_multi_tenant_app_registration.PNG
+		img\Lab06-Diagram.png = img\Lab06-Diagram.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

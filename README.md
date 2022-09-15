@@ -4,6 +4,8 @@
 
 Single and Multi tenant authorization using ASP NET Core and Active Directory
 
+![Lab Diagram](./img/Lab06-Diagram.png)
+
 ## Infrastructure provision
 
 - Create resource group: `az group create --name "rg-open-id-connect" --location "centralus"`
@@ -16,6 +18,8 @@ Single and Multi tenant authorization using ASP NET Core and Active Directory
 Set the following parameters inside Authentication blade,
 Click "Add platform" of type "Web"
 
+![App Registration](./img/01_add_platform.PNG)
+
 And enter the following values:
 
 - Redirect URI: `https://localhost:44302/signin-oidc`
@@ -23,6 +27,8 @@ And enter the following values:
 - ID Tokens (used for implicit and hybrid flows): `Checked`
 
 As per screenshot below
+
+![App Registration](./img/02_add_platform.PNG)
 
 ## Create AD User via Azure Powershell
 
@@ -43,6 +49,8 @@ As per screenshot below
 - Create new
   user: `New-AzureADUser -AccountEnabled $true -DisplayName 'aad_lab_user1' -PasswordProfile $passwordProfile -MailNickName 'aad_lab_user1' -UserPrincipalName "aad_lab_user1@$aadDomainName"`
 - Print new user principal name: `(Get-AzureADUser -Filter "MailNickName eq 'aad_lab_user1'").UserPrincipalName`
+
+![New User](./img/03_new_user_in_portal.PNG)
 
 ## Create ASP NET Core MVC application
 
@@ -111,3 +119,5 @@ As per screenshot below
 - In the **Supported account types** section, select **Accounts in any organizational directory (Any Azure AD directory
   Multi-tenant)**.
 - Select **Save**.
+
+![Multi-tenant](./img/04_multi_tenant_app_registration.PNG)
