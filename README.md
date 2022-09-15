@@ -24,13 +24,13 @@ As per screenshot below
 
 ## Create AD User via Azure Powershell
 
-Update Windows Powershell as Administrator using: `Install-Module PSWindowsUpdate`
+**Requires:**
 
-Requires:
-- [Download Azure PowerShell](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps)
-- As PS administrator: `Install-Module AzureAD`
+- Update Windows Powershell as Administrator using: `Install-Module PSWindowsUpdate`
+- Install [Azure PowerShell](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps)
+- Install as Powershell Administrator: `Install-Module AzureAD`
 
-** Create User **
+**Create User**
 
 - Connect to AD: `Connect-AzureAD -TenantId "tenantId"`
 - Define AD domain variable: `$aadDomainName = ((Get-AzureAdTenantDetail).VerifiedDomains)[0].Name`
