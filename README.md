@@ -16,8 +16,8 @@ Click "Add platform" of type "Web"
 
 And enter the following values:
 
-- Redirect URI: `https://localhost:44321/`
-- Front-channel logout URL: `https://localhost:44321/signout-oidc`
+- Redirect URI: `https://localhost:44302/signin-oidc`
+- Front-channel logout URL: `https://localhost:44302/signout-oidc`
 - ID Tokens (used for implicit and hybrid flows): `Checked`
 
 As per screenshot below
@@ -48,4 +48,9 @@ As per screenshot below
 - Define AD domain variable: `$aadDomainName = ((Get-AzureAdTenantDetail).VerifiedDomains)[0].Name`
 - Create application using client ID and tenant ID:
   `dotnet new mvc --auth SingleOrg --client-id "d9334586-4f28-4277-9358-18d6bc025638" --tenant-id "b40a105f-0643-4922-8e60-10fc1abf9c4b" --domain $aadDomainName`
+- Update nuget packages:
+    - `Microsoft.AspNetCore.Authentication.JwtBearer`
+    - `Microsoft.AspNetCore.Authentication.OpenIdConnect`
+    - `Microsoft.Identity.Web`
+    - `Microsoft.Identity.Web.UI`
 
