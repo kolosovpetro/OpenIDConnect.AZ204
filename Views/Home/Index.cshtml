@@ -2,18 +2,24 @@
     ViewData["Title"] = "Home Page";
 }
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
+<body style="font-family: 'Roboto Mono', monospace; overflow-wrap: break-word;">
 @if (User.Identity?.IsAuthenticated == true)
 {
     <h3>Claims:</h3>
-    <pre>
-    @foreach (var claim in User.Claims)
-    {
-        @(claim.Type + ":" + claim.Value)<br/>
-    }
-    </pre>
+    <ul>
+        @foreach (var claim in User.Claims)
+        {
+            <li><strong>@(claim.Type)</strong>: @(claim.Value)</li>
+        }
+    </ul>
 }
+</body>

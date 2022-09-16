@@ -49,6 +49,7 @@ As per screenshot below
 - Create new
   user: `New-AzureADUser -AccountEnabled $true -DisplayName 'aad_lab_user1' -PasswordProfile $passwordProfile -MailNickName 'aad_lab_user1' -UserPrincipalName "aad_lab_user1@$aadDomainName"`
 - Print new user principal name: `(Get-AzureADUser -Filter "MailNickName eq 'aad_lab_user1'").UserPrincipalName`
+- UPN: `aad_lab_user1@kolosovp94gmail.onmicrosoft.com`
 
 ![New User](./img/03_new_user_in_portal.PNG)
 
