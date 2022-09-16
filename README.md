@@ -65,6 +65,12 @@ As per screenshot below
     - `Microsoft.Identity.Web`
     - `Microsoft.Identity.Web.UI`
 
+## Test your MVC application
+
+From my prospective it is as follows
+
+![Browser output](./img/06_browser_output.PNG)
+
 ## Configure a multi-tenant Azure AD environment
 
 **Create an Azure AD tenant**
