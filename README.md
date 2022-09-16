@@ -122,3 +122,24 @@ As per screenshot below
 - Select **Save**.
 
 ![Multi-tenant](./img/04_multi_tenant_app_registration.PNG)
+
+## Test API with Postman
+
+1. Create application scope: `App registration -> Expose API`
+2. Create client secret: `App registration -> Certificates and  Secrets -> New client secret`
+3. Record the value of secret
+4. Get auth endpoint: `App registrations -> Endpoints (up menu)`
+5. Use OAuth 2.0 token endpoint (v2):
+   `https://login.microsoftonline.com/b40a105f-0643-4922-8e60-10fc1abf9c4b/oauth2/v2.0/token`
+6. Create `POST` request in Postman with following parameters:
+    - Header:
+        - `Content-Type: application/x-www-form-urlencoded`
+    - Body:
+        - `grant_type: client_credentials`
+        - `client_id: ff97d604-c3de-46c8-a96c-1d3491998d7c`
+        - `client_secret: $secretYouCreated` -- from step 3
+        - `scope: api://ff97d604-c3de-46c8-a96c-1d3491998d7c/.default` -- from step 1
+
+So that it looks like
+
+![Postman output](./img/05_postman_output.png)
